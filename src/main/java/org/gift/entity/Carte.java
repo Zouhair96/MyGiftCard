@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Carte  {
@@ -19,20 +20,26 @@ public class Carte  {
 	private double prix;
 	private boolean nouveau;
 	private boolean valable;
+	
+	@OneToOne(mappedBy = "carte")
+    private Enseigns enseigns;
+	
 	public Carte() {
 		super();
 	}
-	public Carte(Long id, String nom, String description, String nomPhoto, double prix, boolean nouveau,
-			boolean valable) {
+
+	public Carte(String nom, String description, String nomPhoto, double prix, boolean nouveau, boolean valable,
+			Enseigns enseigns) {
 		super();
-		this.id = id;
 		this.nom = nom;
 		this.description = description;
 		this.nomPhoto = nomPhoto;
 		this.prix = prix;
 		this.nouveau = nouveau;
 		this.valable = valable;
+		this.enseigns = enseigns;
 	}
+
 	public Long getId() {
 		return id;
 	}
@@ -75,5 +82,12 @@ public class Carte  {
 	public void setValable(boolean valable) {
 		this.valable = valable;
 	}
+	public Enseigns getEnseigns() {
+		return enseigns;
+	}
+	public void setEnseigns(Enseigns enseigns) {
+		this.enseigns = enseigns;
+	}
+	
 
 }
