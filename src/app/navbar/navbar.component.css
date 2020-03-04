@@ -1,0 +1,16 @@
+.example-icon {
+  padding: 0 14px;
+  color: #00eb9d;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar {
+  background-color: #fff;
+  color: #595e6f;
+  box-shadow: 0px 0px 40px #bebfc7;
+  position: fixed;
+  z-index: 200;
+
+}

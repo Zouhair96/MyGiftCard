@@ -1,0 +1,27 @@
+
+mat-list{
+  background-color: #fff;
+  width: 8%;
+  height: 100%;
+  box-shadow: inset 0px 10px 10px -10px #8f9bb3;
+  text-align: center;
+  padding-top: 150px;
+  position: fixed;
+}
+span{
+  color:#8f9bb3 ;
+}
+span:hover{
+  color: #3366ff;
+}
+
+.material-icons{
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+}
+span{
+  font-size: 17px;
+  font-style: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

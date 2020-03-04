@@ -1,0 +1,11 @@
+app-pages{
+  position: absolute;
+  margin: 7% 0% 0% 13%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+app-sidebar{
+  height: 100%;
+}
+
+
