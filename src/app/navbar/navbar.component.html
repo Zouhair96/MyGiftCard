@@ -4,7 +4,25 @@
   <mat-toolbar-row>
     <h1>Gift Card</h1>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <i class="material-icons">playlist_add</i>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/newcarte">
+        <i class="material-icons">add_box</i>
+        <span>Ajouter Carte</span>
+      </button>
+      <button mat-menu-item routerLink="/newcategorie">
+        <i class="material-icons">add_box</i>
+        <span>Ajouter Categrie</span>
+      </button>
+      <button mat-menu-item routerLink="/newenseign">
+        <i class="material-icons">add_box</i>
+        <span>Ajouter Enseigns</span>
+      </button>
+    </mat-menu>
+    <span class="name">Zouhair Ben Ali</span> <i class="material-icons">insert_emoticon</i>
   </mat-toolbar-row>
 </mat-toolbar>

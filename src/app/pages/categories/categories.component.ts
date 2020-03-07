@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CategoriesService } from './categories.service';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  categories;
+  constructor(private service: CategoriesService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.service.getCartegories()
+    .subscribe(data => {
+      this.categories = data;
+    }, err => {
+      console.log(err);
+    });
   }
+  deleteCartegorie(id) {
+    this.service.onDeleteCartegorie(id)
+    .subscribe(data => {
 
+    }, err => {
+      console.log(err);
+    });
+  }
 }

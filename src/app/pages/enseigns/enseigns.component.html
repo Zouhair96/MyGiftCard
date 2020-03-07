@@ -1,1 +1,15 @@
-<p>enseigns works!</p>
+
+<div *ngIf="enseigns">
+  <mat-card><span>Enseigns</span></mat-card>
+  <div class="polaroid" *ngFor="let enseign of enseigns._embedded.enseigns">
+    <!--<img src="{{cat.photoName}}" alt="5 Terre" style="width:100%">-->
+    <div class="container">
+      <button class="button" (click)="deleteEnseign(enseign.id)"> <i class="material-icons delete">delete_forever</i></button>
+      <button class="button" routerLink="/enseigns/edit/{{enseigns.id}}" routerLinkActive="router-link-active" > <i class="material-icons edit">edit</i></button>
+
+    <h1>{{enseign.marque}}</h1>
+    </div>
+
+</div>
+
+</div>

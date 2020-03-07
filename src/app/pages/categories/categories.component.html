@@ -1,1 +1,17 @@
-<p>categories works!</p>
+
+<div *ngIf="categories">
+    <mat-card><span>Categories</span></mat-card>
+  <div class="test" *ngFor="let cat of categories._embedded.categories">
+    <div class="a"><div class="icon"><img src="{{cat.photo}}" alt="5 Terre" style="width:100%"></div></div>
+    <div class="b"><h1>{{cat.name}}</h1></div>
+    <div class="c">
+      <button class="delete" mat-raised-button (click)="deleteCartegorie(cat.id)">
+        Delete</button>
+      <button class="edit" mat-raised-button  routerLink="/categories/edit/{{cat.id}}">
+        Edit</button>
+    </div>
+  </div>
+</div>
+
+
+

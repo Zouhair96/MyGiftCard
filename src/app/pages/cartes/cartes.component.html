@@ -1,15 +1,15 @@
 
 <div *ngIf="cartes">
-  <mat-card><span>Cartes</span><button  mat-raised-button routerLink="/newcarte" routerLinkActive="router-link-active"  >Ajouter Carte</button></mat-card>
+  <mat-card><span>Cartes</span></mat-card>
   <div class="polaroid" *ngFor="let carte of cartes._embedded.cartes">
-    <img src="{{carte.nomPhoto}}" alt="5 Terre" style="width:100%">
+    <img src="{{carte.photo}}" alt="5 Terre" style="width:100%">
     <div class="container">
-      <span class="button"><a href="#"> <i class="material-icons delete">delete_forever</i> </a>
-      <span class="button"><a href="#"> <i class="material-icons edit">edit</i> </a>
+      <button mat-fab class="button" (click)="deleteCarte(carte.id)">
+        <i class="material-icons delete">delete_forever</i></button>
+      <button mat-fab  class="button" routerLink="/cartes/edit/{{carte.id}}"  >
+        <i class="material-icons edit">edit</i></button><br>
+    </div>
 
-    <h1>{{carte.nom}} {{carte.prix}}$</h1>
-    </span>
-  </span>
 </div>
 
 

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 
+import { Component, OnInit } from '@angular/core';
+import { EnseignsService } from './enseigns.service';
 @Component({
   selector: 'app-enseigns',
   templateUrl: './enseigns.component.html',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnseignsComponent implements OnInit {
 
-  constructor() { }
+  enseigns;
+  constructor(private service: EnseignsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   this.service.onGetEnseign()
+    .subscribe(data => {
+      this.enseigns = data;
+    }, err => {
+      console.log(err);
+    });
   }
+  deleteEnseign(id) {
+    this.service.onDeleteEnseign(id)
+    .subscribe(data => {
 
+    }, err => {
+      console.log(err);
+    });
+}
 }

@@ -1,0 +1,18 @@
+<div class="container">
+  <form class="example-form" #f="ngForm" (ngSubmit)="AddCategorie(f.value)">
+    <h1>Nouveau Catégorie</h1>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nom</mat-label>
+      <input matInput  placeholder="Nom" required [ngModel] name="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput [ngModel] name="description"></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Photo</mat-label>
+      <input matInput  placeholder="Photo" required [ngModel] name="photo">
+    </mat-form-field>
+    <button type="submit" >Ajouter</button>
+  </form>
+</div>

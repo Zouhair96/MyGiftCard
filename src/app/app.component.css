@@ -3,6 +3,7 @@ app-pages{
   margin: 7% 0% 0% 13%;
   justify-content: center;
   flex-wrap: wrap;
+  text-align: center;
 }
 app-sidebar{
   height: 100%;

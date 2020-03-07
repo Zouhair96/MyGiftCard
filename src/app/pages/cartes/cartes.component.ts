@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CartesService } from './cartes.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   selector: 'app-cartes',
   templateUrl: './cartes.component.html',
@@ -12,9 +11,17 @@ export class CartesComponent implements OnInit {
 
   ngOnInit() {
     this.service.getCartes()
-    .subscribe(data=>{
+    .subscribe(data => {
       this.cartes = data;
-    }, err =>{
+    }, err => {
+      console.log(err);
+    });
+  }
+  deleteCarte(id) {
+    this.service.deleteCarte(id)
+    .subscribe(data => {
+
+    }, err => {
       console.log(err);
     });
   }

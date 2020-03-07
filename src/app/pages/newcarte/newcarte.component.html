@@ -1,1 +1,57 @@
-<mat-card></mat-card>
+<div class="mycontainer">
+<div class="firstdiv">
+  <div class="container">
+    <form class="example-form" #f="ngForm" (ngSubmit)="AddCarte(f.value)">
+      <h1>Nouveau Carte</h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nom</mat-label>
+        <input matInput  placeholder="Nom" required [ngModel] name="nom">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Prix Minimal</mat-label>
+        <input matInput  placeholder="Nom" required [ngModel] name="minPrix">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Prix Maximal</mat-label>
+        <input matInput  placeholder="Nom" required [ngModel] name="maxPrix">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput [ngModel] name="description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Photo</mat-label>
+        <input matInput  placeholder="Photo" required [ngModel] name="photo">
+      </mat-form-field>
+
+      <button type="submit" >Ajouter</button>
+    </form>
+  </div>
+</div>
+<div class="seconddiv">
+  <mat-card class="example-card">
+    <mat-card-header>
+    </mat-card-header>
+    <img mat-card-image src="https://blisscreekgolf.com/wp-content/uploads/2018/01/giftcard.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+</div>
+
+

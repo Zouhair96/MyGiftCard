@@ -1,8 +1,9 @@
-.example-icon {
+
+.material-icons{
   padding: 0 14px;
   color: #00eb9d;
+  cursor: pointer;
 }
-
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -13,4 +14,10 @@ mat-toolbar {
   position: fixed;
   z-index: 200;
 
+}
+.mat-icon-button{
+  margin-right: 15px;
+}
+.name{
+  font-weight: 200;
 }
