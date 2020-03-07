@@ -4,7 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+
 
 @Entity
 public class Carte  {
@@ -16,78 +18,99 @@ public class Carte  {
 	
 	private String nom;
 	private String description;
-	private String nomPhoto;
-	private double prix;
-	private boolean nouveau;
-	private boolean valable;
+	private String photo;
+	private double minPrix;
+	private double maxPrix;
+	
 	
 	@OneToOne(mappedBy = "carte")
-    private Enseigns enseigns;
+    private Enseign enseign;
+	
+	@ManyToOne
+	private Categorie categorie;
 	
 	public Carte() {
 		super();
 	}
 
-	public Carte(String nom, String description, String nomPhoto, double prix, boolean nouveau, boolean valable,
-			Enseigns enseigns) {
-		super();
-		this.nom = nom;
-		this.description = description;
-		this.nomPhoto = nomPhoto;
-		this.prix = prix;
-		this.nouveau = nouveau;
-		this.valable = valable;
-		this.enseigns = enseigns;
-	}
-
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNom() {
 		return nom;
 	}
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getNomPhoto() {
-		return nomPhoto;
+
+	public String getphoto() {
+		return photo;
 	}
-	public void setNomPhoto(String nomPhoto) {
-		this.nomPhoto = nomPhoto;
+
+	public void setphoto(String photo) {
+		this.photo = photo;
 	}
-	public double getPrix() {
-		return prix;
+
+	public double getMinPrix() {
+		return minPrix;
 	}
-	public void setPrix(double prix) {
-		this.prix = prix;
+
+	public void setMinPrix(double minPrix) {
+		this.minPrix = minPrix;
 	}
-	public boolean isNouveau() {
-		return nouveau;
+
+	public double getMaxPrix() {
+		return maxPrix;
 	}
-	public void setNouveau(boolean nouveau) {
-		this.nouveau = nouveau;
+
+	public void setMaxPrix(double maxPrix) {
+		this.maxPrix = maxPrix;
 	}
-	public boolean isValable() {
-		return valable;
+
+	public Enseign getEnseign() {
+		return enseign;
 	}
-	public void setValable(boolean valable) {
-		this.valable = valable;
+
+	public void setEnseign(Enseign enseign) {
+		this.enseign = enseign;
 	}
-	public Enseigns getEnseigns() {
-		return enseigns;
+
+	public Categorie getCategorie() {
+		return categorie;
 	}
-	public void setEnseigns(Enseigns enseigns) {
-		this.enseigns = enseigns;
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
 	}
+
+	public Carte(Long id, String nom, String description, String photo, double minPrix, double maxPrix, Enseign enseign,
+			Categorie categorie) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.description = description;
+		this.photo = photo;
+		this.minPrix = minPrix;
+		this.maxPrix = maxPrix;
+		this.enseign = enseign;
+		this.categorie = categorie;
+	}
+
+	
 	
 
 }

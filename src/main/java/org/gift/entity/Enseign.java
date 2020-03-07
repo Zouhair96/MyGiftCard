@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Enseigns {
+public class Enseign {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -19,15 +19,15 @@ public class Enseigns {
 	private String gmail;
 	private int tel;
 	
-	 @OneToOne(cascade = CascadeType.ALL)
-	    @JoinColumn(name = "carte_id", referencedColumnName = "id")
-	    private Carte carte;
+	@OneToOne
+	@JoinColumn(name = "carte_id", referencedColumnName = "id")
+	private Carte carte;
 	 
-	public Enseigns() {
+	public Enseign() {
 		super();
 	}
 
-	public Enseigns(String marque, String adress, String gmail, int tel, Carte carte) {
+	public Enseign(String marque, String adress, String gmail, int tel, Carte carte) {
 		super();
 		this.marque = marque;
 		this.adress = adress;
