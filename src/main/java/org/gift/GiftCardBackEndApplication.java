@@ -24,7 +24,7 @@ public class GiftCardBackEndApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(GiftCardBackEndApplication.class, args);
 	}
-	@Bean 
+	/*@Bean 
 	CommandLineRunner start(AccountService accountService) {
 		return args->{
 				accountService.save(new AppRole(null,"USER"));
@@ -34,7 +34,7 @@ public class GiftCardBackEndApplication implements CommandLineRunner {
 				});
 				accountService.addRoleToUser("admin","ADMIN");
 		};
-	}
+	}*/
 	@Bean
 	BCryptPasswordEncoder getBCPE() {
 		return new BCryptPasswordEncoder();

@@ -27,6 +27,9 @@ public class Carte  {
     private Enseign enseign;
 	
 	@ManyToOne
+	private Panier panier; 
+	
+	@ManyToOne
 	private Categorie categorie;
 	
 	public Carte() {
@@ -97,8 +100,24 @@ public class Carte  {
 		this.categorie = categorie;
 	}
 
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
+	public Panier getPanier() {
+		return panier;
+	}
+
+	public void setPanier(Panier panier) {
+		this.panier = panier;
+	}
+
 	public Carte(Long id, String nom, String description, String photo, double minPrix, double maxPrix, Enseign enseign,
-			Categorie categorie) {
+			Panier panier, Categorie categorie) {
 		super();
 		this.id = id;
 		this.nom = nom;
@@ -107,8 +126,11 @@ public class Carte  {
 		this.minPrix = minPrix;
 		this.maxPrix = maxPrix;
 		this.enseign = enseign;
+		this.panier = panier;
 		this.categorie = categorie;
 	}
+
+
 
 	
 	
