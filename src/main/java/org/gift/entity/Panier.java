@@ -1,13 +1,10 @@
 package org.gift.entity;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+
 
 @Entity
 public class Panier {
@@ -17,12 +14,26 @@ public class Panier {
 	
 	private double total;
 	private int nombre;
+	private String user_name;
 	
-	@OneToMany(mappedBy = "panier")
-	private Collection<Carte> cartes;
+
 	
-	@OneToOne(mappedBy = "panier")
-    private AppUser user;
+
+	public Panier() {
+		super();
+	}
+
+
+
+	public Panier(Long id, double total, int nombre, String user_name) {
+		super();
+		this.id = id;
+		this.total = total;
+		this.nombre = nombre;
+		this.user_name = user_name;
+	}
+
+
 
 	public Long getId() {
 		return id;
@@ -48,35 +59,14 @@ public class Panier {
 		this.nombre = nombre;
 	}
 
-	public Collection<Carte> getCartes() {
-		return cartes;
+	public String getUser_name() {
+		return user_name;
 	}
 
-	public void setCartes(Collection<Carte> cartes) {
-		this.cartes = cartes;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
 
-	public AppUser getUser() {
-		return user;
-	}
-
-	public void setUser(AppUser user) {
-		this.user = user;
-	}
-
-	public Panier(Long id, double total, int nombre, Collection<Carte> cartes, AppUser user) {
-		super();
-		this.id = id;
-		this.total = total;
-		this.nombre = nombre;
-		this.cartes = cartes;
-		this.user = user;
-	}
-
-	public Panier() {
-		super();
-	}
-	
 	
 	
 

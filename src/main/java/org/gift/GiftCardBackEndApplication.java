@@ -3,9 +3,11 @@ package org.gift;
 import java.util.stream.Stream;
 
 import org.gift.entity.AppRole;
+import org.gift.entity.AppUser;
 import org.gift.entity.Carte;
 import org.gift.entity.Categorie;
 import org.gift.entity.Enseign;
+import org.gift.entity.Panier;
 import org.gift.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -41,7 +43,7 @@ public class GiftCardBackEndApplication implements CommandLineRunner {
 	}
 	@Override
 	public void run(String... args) throws Exception {
-		 repositoryRestConfiguration.exposeIdsFor(Carte.class, Categorie.class, Enseign.class);
+		 repositoryRestConfiguration.exposeIdsFor(Carte.class, Categorie.class, Enseign.class,AppUser.class,AppRole.class,Panier.class);
 		
 	}
 	

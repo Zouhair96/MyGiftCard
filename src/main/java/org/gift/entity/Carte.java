@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
@@ -23,18 +24,32 @@ public class Carte  {
 	private double maxPrix;
 	
 	
-	@OneToOne(mappedBy = "carte")
-    private Enseign enseign;
-	
 	@ManyToOne
-	private Panier panier; 
+	private Enseign enseign;
+	
 	
 	@ManyToOne
 	private Categorie categorie;
 	
+	
 	public Carte() {
 		super();
 	}
+	
+
+	public Carte(Long id, String nom, String description, String photo, double minPrix, double maxPrix, Enseign enseign,
+			Categorie categorie) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.description = description;
+		this.photo = photo;
+		this.minPrix = minPrix;
+		this.maxPrix = maxPrix;
+		this.enseign = enseign;
+		this.categorie = categorie;
+	}
+
 
 	public Long getId() {
 		return id;
@@ -60,11 +75,11 @@ public class Carte  {
 		this.description = description;
 	}
 
-	public String getphoto() {
+	public String getPhoto() {
 		return photo;
 	}
 
-	public void setphoto(String photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
 
@@ -100,39 +115,5 @@ public class Carte  {
 		this.categorie = categorie;
 	}
 
-	public String getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
-
-	public Panier getPanier() {
-		return panier;
-	}
-
-	public void setPanier(Panier panier) {
-		this.panier = panier;
-	}
-
-	public Carte(Long id, String nom, String description, String photo, double minPrix, double maxPrix, Enseign enseign,
-			Panier panier, Categorie categorie) {
-		super();
-		this.id = id;
-		this.nom = nom;
-		this.description = description;
-		this.photo = photo;
-		this.minPrix = minPrix;
-		this.maxPrix = maxPrix;
-		this.enseign = enseign;
-		this.panier = panier;
-		this.categorie = categorie;
-	}
-
-
-
-	
-	
 
 }

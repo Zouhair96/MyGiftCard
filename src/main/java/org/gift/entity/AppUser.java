@@ -10,7 +10,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
@@ -30,32 +29,14 @@ public class AppUser {
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Collection<AppRole> roles = new ArrayList<>();
 	
-	@OneToOne
-	@JoinColumn(name = "panier_id", referencedColumnName = "id")
-	private Panier panier;
 	
 	
-	public AppUser(Long id, String username, String password, boolean activated, Collection<AppRole> roles,
-			Panier panier) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.activated = activated;
-		this.roles = roles;
-		this.panier = panier;
-	}
+	
+
 	public AppUser() {
 		super();
 	}
 	
-	
-	public Panier getPanier() {
-		return panier;
-	}
-	public void setPanier(Panier panier) {
-		this.panier = panier;
-	}
 	public Long getId() {
 		return id;
 	}

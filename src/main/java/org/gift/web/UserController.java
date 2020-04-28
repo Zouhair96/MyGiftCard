@@ -19,9 +19,10 @@ public class UserController {
 	@Autowired
 	private AccountService accountService;
 	@PostMapping("/register")
-	public AppUser register(@RequestBody UserForm userForm) {
+	public AppUser register(@RequestBody UserForm userForm,AppUser appUser) {
 		return accountService.saveUser(
 				userForm.getUsername(),userForm.getPassword(),userForm.getConfirmedPassword());
+		
 	}
 
 }
@@ -33,6 +34,7 @@ public class UserController {
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
