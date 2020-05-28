@@ -1,19 +1,18 @@
 package org.gift;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-//import org.openqa.selenium.*;
-//import org.openqa.selenium.chrome.ChromeDriver;
-@SpringBootTest
-class GiftCardBackEndApplicationTests {
-	//WebDriver driver;
-	
-	@Test
-	void contextLoads() {
-		//driver = new ChromeDriver();
-		//driver.get("htp://facebook.com");
-		//driver.quit();
-		
-	}
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
+public class GiftCardBackEndApplicationTests {
+	
+	@BeforeTest
+	public void beforeTest() {
+	      System.out.println("BeforeTest run ...");
+	      
+	}
+	
+   @Test
+   public void testAdd() {
+	      System.out.println("Zouhair Ben Ali");
+   }
 }

@@ -3,7 +3,9 @@ package org.gift.entity;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -28,15 +31,24 @@ public class AppUser {
 	private boolean activated;
 	@ManyToMany(fetch = FetchType.EAGER)
 	private Collection<AppRole> roles = new ArrayList<>();
+	@OneToMany(mappedBy = "user")
+	private Collection<Commande> commandes;
 	
-	
-	
-	
-
 	public AppUser() {
 		super();
 	}
 	
+	public AppUser(Long id, String username, String password, boolean activated, Collection<AppRole> roles,
+			Set<Commande> commandes) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.activated = activated;
+		this.roles = roles;
+		this.commandes = commandes;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -66,6 +78,14 @@ public class AppUser {
 	}
 	public void setRoles(Collection<AppRole> roles) {
 		this.roles = roles;
+	}
+
+	public Collection<Commande> getCommandes() {
+		return commandes;
+	}
+
+	public void setCommandes(Set<Commande> commandes) {
+		this.commandes = commandes;
 	}
 	
 
