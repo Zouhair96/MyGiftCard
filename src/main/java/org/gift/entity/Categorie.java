@@ -2,6 +2,7 @@ package org.gift.entity;
 
 import java.util.Collection;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,8 +16,11 @@ public class Categorie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(nullable = false)
 	private String name;
+	@Column(nullable = false)
 	private String description;
+	@Column(nullable = false)
 	private String photo;
 	
 	@OneToMany(mappedBy = "categorie")

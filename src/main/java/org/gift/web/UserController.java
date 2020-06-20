@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.Data;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
+@CrossOrigin("*")
 @RestController
 public class UserController {
 	

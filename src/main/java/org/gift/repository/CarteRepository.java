@@ -16,5 +16,10 @@ public interface CarteRepository extends JpaRepository<Carte , Long>{
 	
 	@RestResource(path ="/cartes")
 	public List<Carte> findByNomContains(@Param("mc") String mc);
+	
+	@RestResource(path ="/asc")
+	public List<Carte> findByOrderByPrixAsc();
+	
+
 
 }

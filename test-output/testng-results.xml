@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3130" started-at="2020-05-28T15:00:11 BST" finished-at="2020-05-28T15:00:14 BST">
+  <suite name="Default suite" duration-ms="3022" started-at="2020-05-28T15:49:18 BST" finished-at="2020-05-28T15:49:21 BST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3130" started-at="2020-05-28T15:00:11 BST" finished-at="2020-05-28T15:00:14 BST">
+    <test name="Default test" duration-ms="3022" started-at="2020-05-28T15:49:18 BST" finished-at="2020-05-28T15:49:21 BST">
       <class name="org.gift.FirstTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.gift.FirstTest@1a052a00]" name="beforeTest" is-config="true" duration-ms="12" started-at="2020-05-28T15:00:11 BST" finished-at="2020-05-28T15:00:11 BST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.gift.FirstTest@1a052a00]" name="beforeTest" is-config="true" duration-ms="12" started-at="2020-05-28T15:49:18 BST" finished-at="2020-05-28T15:49:18 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:org.gift.FirstTest@1a052a00]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-05-28T15:00:14 BST" finished-at="2020-05-28T15:00:14 BST">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:org.gift.FirstTest@1a052a00]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-05-28T15:49:21 BST" finished-at="2020-05-28T15:49:21 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:org.gift.FirstTest@1a052a00]" name="f" duration-ms="6" started-at="2020-05-28T15:00:14 BST" finished-at="2020-05-28T15:00:14 BST">
+        <test-method status="PASS" signature="f()[pri:0, instance:org.gift.FirstTest@1a052a00]" name="f" duration-ms="9" started-at="2020-05-28T15:49:21 BST" finished-at="2020-05-28T15:49:21 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
       </class> <!-- org.gift.FirstTest -->
       <class name="org.gift.GiftCardBackEndApplicationTests">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.gift.GiftCardBackEndApplicationTests@770c2e6b]" name="beforeTest" is-config="true" duration-ms="0" started-at="2020-05-28T15:00:11 BST" finished-at="2020-05-28T15:00:11 BST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.gift.GiftCardBackEndApplicationTests@770c2e6b]" name="beforeTest" is-config="true" duration-ms="0" started-at="2020-05-28T15:49:18 BST" finished-at="2020-05-28T15:49:18 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:org.gift.GiftCardBackEndApplicationTests@770c2e6b]" name="testAdd" duration-ms="2" started-at="2020-05-28T15:00:14 BST" finished-at="2020-05-28T15:00:14 BST">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:org.gift.GiftCardBackEndApplicationTests@770c2e6b]" name="testAdd" duration-ms="3" started-at="2020-05-28T15:49:21 BST" finished-at="2020-05-28T15:49:21 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
       </class> <!-- org.gift.GiftCardBackEndApplicationTests -->
       <class name="org.gift.homepageTest">
-        <test-method status="FAIL" signature="Test()[pri:0, instance:org.gift.homepageTest@4d826d77]" name="Test" duration-ms="3056" started-at="2020-05-28T15:00:11 BST" finished-at="2020-05-28T15:00:14 BST">
+        <test-method status="FAIL" signature="Test()[pri:0, instance:org.gift.homepageTest@4d826d77]" name="Test" duration-ms="2868" started-at="2020-05-28T15:49:18 BST" finished-at="2020-05-28T15:49:21 BST">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 79
