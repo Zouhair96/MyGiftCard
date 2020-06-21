@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-skipped">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\zouhair\AppData\Local\Temp\testng-eclipse--1483314826\testng-customsuite.xml</span>
+                    <span>C:\Users\zouhair\AppData\Local\Temp\testng-eclipse--555665342\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,40 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content skipped suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.gift.homepageTest" hash-for-method="Test">Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.gift.TestPanier" hash-for-method="testPanier">testPanier</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.gift.FirstTest" hash-for-method="f">f</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.gift.GiftCardBackEndApplicationTests" hash-for-method="testAdd">testAdd</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,45 +117,45 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">org.gift.homepageTest</span>
+              <img src="skipped.png"/>
+              <span class="class-name">org.gift.TestPanier</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test">
-                  </a> <!-- Test -->
-                  <span class="method-name">Test</span>
+                  <a name="testPanier">
+                  </a> <!-- testPanier -->
+                  <span class="method-name">testPanier</span>
                   <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 79
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-PPQS615&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: driver.version: ChromeDriver
 remote stacktrace: Backtrace:
-	Ordinal0 [0x00A3A113+1548563]
-	Ordinal0 [0x009BDDA1+1039777]
-	Ordinal0 [0x0093E485+517253]
-	Ordinal0 [0x008CFD34+64820]
-	Ordinal0 [0x008CC61E+50718]
-	Ordinal0 [0x008EB797+178071]
-	Ordinal0 [0x008EB59D+177565]
-	Ordinal0 [0x008E95FB+169467]
-	Ordinal0 [0x008D160A+71178]
-	Ordinal0 [0x008D2690+75408]
-	Ordinal0 [0x008D2629+75305]
-	Ordinal0 [0x009D71B7+1143223]
-	GetHandleVerifier [0x00AD2B46+507814]
-	GetHandleVerifier [0x00AD2864+507076]
-	GetHandleVerifier [0x00AD9F47+537511]
-	GetHandleVerifier [0x00AD3402+510050]
-	Ordinal0 [0x009CF29C+1110684]
-	Ordinal0 [0x009D938B+1151883]
-	Ordinal0 [0x009D94F3+1152243]
-	Ordinal0 [0x009D83F5+1147893]
-	BaseThreadInitThunk [0x76F96359+25]
-	RtlGetAppContainerNamedObjectPath [0x77267C24+228]
-	RtlGetAppContainerNamedObjectPath [0x77267BF4+180]
+	Ordinal0 [0x008DA113+1548563]
+	Ordinal0 [0x0085DDA1+1039777]
+	Ordinal0 [0x007DE485+517253]
+	Ordinal0 [0x0076FD34+64820]
+	Ordinal0 [0x0076C61E+50718]
+	Ordinal0 [0x0078B797+178071]
+	Ordinal0 [0x0078B59D+177565]
+	Ordinal0 [0x007895FB+169467]
+	Ordinal0 [0x0077160A+71178]
+	Ordinal0 [0x00772690+75408]
+	Ordinal0 [0x00772629+75305]
+	Ordinal0 [0x008771B7+1143223]
+	GetHandleVerifier [0x00972B46+507814]
+	GetHandleVerifier [0x00972864+507076]
+	GetHandleVerifier [0x00979F47+537511]
+	GetHandleVerifier [0x00973402+510050]
+	Ordinal0 [0x0086F29C+1110684]
+	Ordinal0 [0x0087938B+1151883]
+	Ordinal0 [0x008794F3+1152243]
+	Ordinal0 [0x008783F5+1147893]
+	BaseThreadInitThunk [0x760F6359+25]
+	RtlGetAppContainerNamedObjectPath [0x77BE7C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77BE7BF4+180]
 
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -202,19 +183,17 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at org.gift.homepageTest.Test(homepageTest.java:13)
+	at org.gift.TestPanier.setUp(TestPanier.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at org.testng.TestRunner.privateRun(TestRunner.java:770)
 	at org.testng.TestRunner.run(TestRunner.java:591)
@@ -236,41 +215,11 @@ remote stacktrace: Backtrace:
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">org.gift.GiftCardBackEndApplicationTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAdd">
-                  </a> <!-- testAdd -->
-                  <span class="method-name">testAdd</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">org.gift.FirstTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="f">
-                  </a> <!-- f -->
-                  <span class="method-name">f</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-skipped -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\zouhair\AppData\Local\Temp\testng-eclipse--1483314826\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\zouhair\AppData\Local\Temp\testng-eclipse--555665342\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -279,40 +228,7 @@ remote stacktrace: Backtrace:
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.gift.GiftCardBackEndApplication&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.PanierRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.Enseign&quot;/&gt;
-      &lt;class name=&quot;org.gift.web.CarteController&quot;/&gt;
-      &lt;class name=&quot;org.gift.web.CommandeForm&quot;/&gt;
-      &lt;class name=&quot;org.gift.homepageTest&quot;/&gt;
-      &lt;class name=&quot;org.gift.GiftCardBackEndApplicationTests&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.Panier&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.CarteRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.AppUser&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.CategoriesRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.web.UserController&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.AppRole&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.Commande&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.LigneCommandeRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.security.JWTAuthenticationFilter&quot;/&gt;
-      &lt;class name=&quot;org.gift.web.CommandeCartes&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.AppRoleRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.CommandeRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.web.UserForm&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.EnseignsRepository&quot;/&gt;
-      &lt;class name=&quot;org.gift.security.SecurityConfig&quot;/&gt;
-      &lt;class name=&quot;org.gift.security.UserDetailsServiceImpl&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.Categorie&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.PanierItem&quot;/&gt;
-      &lt;class name=&quot;org.gift.service.AccountService&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.LigneCommande&quot;/&gt;
-      &lt;class name=&quot;org.gift.security.JWTAuthorizationFilter&quot;/&gt;
-      &lt;class name=&quot;org.gift.FirstTest&quot;/&gt;
-      &lt;class name=&quot;org.gift.web.CommandeController&quot;/&gt;
-      &lt;class name=&quot;org.gift.entity.Carte&quot;/&gt;
-      &lt;class name=&quot;org.gift.security.SecurityParams&quot;/&gt;
-      &lt;class name=&quot;org.gift.service.AccountServiceImpl&quot;/&gt;
-      &lt;class name=&quot;org.gift.repository.AppUserRepository&quot;/&gt;
+      &lt;class name=&quot;org.gift.TestPanier&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -326,7 +242,7 @@ remote stacktrace: Backtrace:
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (34 classes)</span>
+                <span class="test-name">Default test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -352,24 +268,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test')
-data.setCell(0, 2, 'org.gift.homepageTest')
-data.setCell(0, 3, 2868);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'f')
-data.setCell(1, 2, 'org.gift.FirstTest')
-data.setCell(1, 3, 9);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAdd')
-data.setCell(2, 2, 'org.gift.GiftCardBackEndApplicationTests')
-data.setCell(2, 3, 3);
+data.setCell(0, 1, 'testPanier')
+data.setCell(0, 2, 'org.gift.TestPanier')
+data.setCell(0, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -395,45 +303,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.gift.FirstTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.gift.GiftCardBackEndApplicationTests</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">12 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.gift.homepageTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
+              <div class="chronological-class-name">org.gift.TestPanier</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Test</span>
-                <span class="method-start">35 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.gift.FirstTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">2991 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">f</span>
-                <span class="method-start">2992 ms</span>
+                <span class="method-name">testPanier</span>
+                <span class="method-start">2704 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.gift.GiftCardBackEndApplicationTests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testAdd</span>
-                <span class="method-start">3008 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">2735 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
