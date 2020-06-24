@@ -17,7 +17,7 @@ public class TestPanier {
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
 	  String projectPath = System.getProperty("user.dir");
-	  System.setProperty("webdriver.chrome.driver",projectPath + "/driver/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver",projectPath + "/driver2/chromedriver.exe");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

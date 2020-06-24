@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@CrossOrigin("*")
+
 @RestController
 public class UserController {
 	
 	@Autowired
 	private AccountService accountService;
 	@PostMapping("/register")
-	public AppUser register(@RequestBody UserForm userForm,AppUser appUser) {
+	public AppUser register(@RequestBody UserForm userForm) {
 		return accountService.saveUser(
 				userForm.getUsername(),userForm.getPassword(),userForm.getConfirmedPassword());
-		
 	}
 
 }
@@ -35,7 +34,6 @@ public class UserController {
 	public String getUsername() {
 		return username;
 	}
-
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -51,7 +49,6 @@ public class UserController {
 	public void setConfirmedPassword(String confirmedPassword) {
 		this.confirmedPassword = confirmedPassword;
 	}
-
 
 
  }

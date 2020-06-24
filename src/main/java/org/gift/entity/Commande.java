@@ -10,8 +10,7 @@ public class Commande {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	private String name;
+
 	
 	@ManyToOne
 	private AppUser user;
@@ -25,16 +24,10 @@ public class Commande {
 		super();
 	}
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Commande(Long id, String name, AppUser user, Set<LigneCommande> ligneCommandes) {
+
+	public Commande(Long id, AppUser user, Set<LigneCommande> ligneCommandes) {
 		super();
 		this.id = id;
-		this.name = name;
 		this.user = user;
 		this.ligneCommandes = ligneCommandes;
 	}

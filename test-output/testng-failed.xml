@@ -10,6 +10,11 @@
           <include name="testPanier"/>
         </methods>
       </class> <!-- org.gift.TestPanier -->
+      <class name="org.gift.homepageTest">
+        <methods>
+          <include name="Test"/>
+        </methods>
+      </class> <!-- org.gift.homepageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
