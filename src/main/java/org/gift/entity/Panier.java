@@ -15,6 +15,7 @@ public class Panier {
 	private double total;
 	private int nombre;
 	private String user_name;
+	private String anything;
 	
 
 	
