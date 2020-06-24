@@ -1,57 +1,92 @@
-<div class="mycontainer">
+<div class="mycontainer" *ngIf="mode == 'new-carte'">
 <div class="firstdiv">
-  <div class="container">
+  <div class="container" >
     <form class="example-form" #f="ngForm" (ngSubmit)="AddCarte(f.value)">
       <h1>Nouveau Carte</h1>
-      <mat-form-field class="example-full-width">
-        <mat-label>Nom</mat-label>
-        <input matInput  placeholder="Nom" required [ngModel] name="nom">
-      </mat-form-field>
+        <input #Nom="ngModel" class="text" matInput  placeholder="Nom" required [ngModel] name="nom"><br>
+        <div class="help" *ngIf="!Nom.valid && Nom.touched">Ne peut pas être vide !!</div>
+        <input type="number" step="5" class="text" matInput  placeholder="Prix Minimal" required [(ngModel)]="minprix" name="minPrix">
+        <input type="number" step="5" min="{{minprix}}" value="{{minprix}}" class="text" [(ngModel)]="maxprix" matInput  placeholder="Prix Maximal" required [(ngModel)]="maxprix" name="maxPrix">
+        <input type="number" step="5" min="{{minprix}}" max="{{maxprix}}" class="text" matInput  placeholder="Prix" required [ngModel] name="prix">
+        <textarea class="text" matInput [ngModel] name="description" placeholder="Description"></textarea>
+        <input class="file" type="file" (change)="onSelectFile($event)" required [ngModel] name="photo"><br>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Prix Minimal</mat-label>
-        <input matInput  placeholder="Nom" required [ngModel] name="minPrix">
-      </mat-form-field>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" >  Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu" *ngIf="categories">
+            <li *ngFor="let c of categories._embedded.categories"  ><a  class="aa">{{c.name}}</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" >  Enseignes <span class="caret"></span></a>
+          <ul class="dropdown-menu" *ngIf="enseigns">
+            <li  *ngFor="let e of enseigns._embedded.enseigns"  ><a class="aa">{{e.marque}}</a></li>
+          </ul>
+        </li>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Prix Maximal</mat-label>
-        <input matInput  placeholder="Nom" required [ngModel] name="maxPrix">
-      </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Description</mat-label>
-        <textarea matInput [ngModel] name="description"></textarea>
-      </mat-form-field>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Photo</mat-label>
-        <input matInput  placeholder="Photo" required [ngModel] name="photo">
-      </mat-form-field>
-
-      <button type="submit" >Ajouter</button>
+        <button class="btn-add" type="submit" >Ajouter</button>
     </form>
   </div>
 </div>
 <div class="seconddiv">
-  <mat-card class="example-card">
-    <mat-card-header>
-    </mat-card-header>
     <img mat-card-image src="https://blisscreekgolf.com/wp-content/uploads/2018/01/giftcard.png" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-
 </div>
 
 </div>
+<div class="mycontainer" *ngIf="mode == 'edit-carte'">
+  <div class="firstdiv">
+    <div class="container" >
+      <form class="example-form" #f="ngForm" (ngSubmit)="AddCarte(f.value)">
+        <h1>Modéfier Carte</h1>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nom</mat-label>
+          <input matInput  placeholder="Nom" required [ngModel] name="nom">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Prix Minimal</mat-label>
+          <input matInput  placeholder="Nom" required [ngModel] name="minPrix">
+        </mat-form-field>
+
+
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput [ngModel] name="description" placeholder="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Photo</mat-label>
+          <input type="file" (change)="onSelectFile($event)">
+          <!--<button  (click)="upload()">Upload</button>-->
+        </mat-form-field>
+
+        <button type="submit" >Ajouter</button>
+      </form>
+    </div>
+  </div>
+  <div class="seconddiv">
+    <mat-card class="example-card">
+      <mat-card-header>
+      </mat-card-header>
+      <img mat-card-image src="https://blisscreekgolf.com/wp-content/uploads/2018/01/giftcard.png" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+  </div>
+
+
 
 

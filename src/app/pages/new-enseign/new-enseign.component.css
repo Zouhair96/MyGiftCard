@@ -10,23 +10,49 @@
   background-color: #fff;
   background-position: 0% 0%;
   color: #000;
-  height: 512px;
+  min-height: 550px;
   width: 1100px;
   padding: 16px 20px 16px 20px;
   min-height: auto;
   min-width: auto;
   position: relative;
-  display: flex;
+  height: 100%;
+
 }
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.text{
+  width: 40%;
+  height: 70px;
+  border: 1px solid;
+  margin: 5px;
+  padding-left: 10px;
+  font-weight: 600;
+  text-align: left;
+}
+.file{
+  width: 40%;
+  height: 70px;
+  border: 1px solid;
+  margin-left: 30%;
+  font-weight: 600;
+  text-align: left;
+}
+.btn-add{
+  width: 41%;
+  height: 70px;
+  border: none;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
 }
 
-.example-full-width {
-  width: 100%;
+.btn-add:hover{
+  background-color: transparent;
+  border: 1px solid;
+  color: #000;
 }
+
 h1{
   font-size: 36px;
   font-weight: 700;
@@ -34,4 +60,13 @@ h1{
   height: 48px;
   margin: 32px 0 32px 0;
   box-sizing: border-box;
+}
+.help{
+  width: 40%;
+  height: 30px;
+  margin-left: 30%;
+  font-weight: 400;
+  text-align: left;
+  color: red;
+  background-color: rgba(255, 159, 159, 0.3);
 }

@@ -10,6 +10,7 @@ mat-list{
 }
 span{
   color:#8f9bb3 ;
+  cursor: pointer;
 }
 span:hover{
   color: #3366ff;

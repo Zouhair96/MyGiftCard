@@ -1,0 +1,9 @@
+
+<div *ngIf="cartes">
+  <mat-card><span>Cartes</span></mat-card>
+  <div class="polaroid" *ngFor="let carte of cartes._embedded.cartes">
+    <img src="{{carte.photo}}" alt="5 Terre" style="width:100%">
+    <div class="container">
+</div>
+
+

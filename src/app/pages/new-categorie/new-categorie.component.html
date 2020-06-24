@@ -1,18 +1,13 @@
-<div class="container">
+<section>
   <form class="example-form" #f="ngForm" (ngSubmit)="AddCategorie(f.value)">
     <h1>Nouveau Catégorie</h1>
-    <mat-form-field class="example-full-width">
-      <mat-label>Nom</mat-label>
-      <input matInput  placeholder="Nom" required [ngModel] name="name">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Description</mat-label>
-      <textarea matInput [ngModel] name="description"></textarea>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Photo</mat-label>
-      <input matInput  placeholder="Photo" required [ngModel] name="photo">
-    </mat-form-field>
-    <button type="submit" >Ajouter</button>
+      <input class="text" matInput #Nom="ngModel"   placeholder="Nom du Catégorie" required [ngModel] name="name" placeholder="Nom"><br>
+      <div class="help" *ngIf="!Nom.valid && Nom.touched">Ne peut pas être vide !!</div>
+      <textarea class="text" #desc="ngModel"  matInput [ngModel] name="description" placeholder="description" required></textarea><br>
+      <div class="help" *ngIf="!desc.valid && desc.touched">Ne peut pas être vide !!</div>
+      <input  class="file" type="file" (change)="onSelectFile($event)" required [ngModel] name="photo"><br>
+    <button class="btn-add" type="submit" >Ajouter</button>
   </form>
-</div>
+</section>
+
+

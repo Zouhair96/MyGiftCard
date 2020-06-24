@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
 import { EnseignsService } from './../enseigns/enseigns.service';
 @Component({
   selector: 'app-new-enseign',
@@ -7,10 +6,8 @@ import { EnseignsService } from './../enseigns/enseigns.service';
   styleUrls: ['./new-enseign.component.css']
 })
 export class NewEnseignComponent implements OnInit {
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  private selectedFiles = true;
+
   constructor(private service: EnseignsService) { }
 
   ngOnInit(): void {
@@ -22,5 +19,8 @@ export class NewEnseignComponent implements OnInit {
     }, err => {
       console.log(err);
     });
+  }
+  onSelectFile(event){
+    this.selectedFiles = event.target.files;
   }
 }

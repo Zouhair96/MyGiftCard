@@ -6,6 +6,7 @@ import { CategoriesService } from './../categories/categories.service';
   styleUrls: ['./new-categorie.component.css']
 })
 export class NewCategorieComponent implements OnInit {
+  private selectedFiles = true;
 
   constructor(private service: CategoriesService) { }
 
@@ -18,5 +19,8 @@ export class NewCategorieComponent implements OnInit {
     }, err => {
       console.log(err);
     });
+  }
+  onSelectFile(event){
+    this.selectedFiles = event.target.files;
   }
 }

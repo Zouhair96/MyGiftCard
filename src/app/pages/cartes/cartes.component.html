@@ -1,12 +1,14 @@
 
 <div *ngIf="cartes">
-  <mat-card><span>Cartes</span></mat-card>
-  <div class="polaroid" *ngFor="let carte of cartes._embedded.cartes">
-    <img src="{{carte.photo}}" alt="5 Terre" style="width:100%">
+  <mat-card><span>    <input class="rechercher" type="text" [(ngModel)]="mc" (change)="chercher()"/> <button class="btn-rechercher" (click)="chercher()">Chercher</button>
+  </span></mat-card>
+  <div class="polaroid" *ngFor="let mc of cartes._embedded.cartes">
+    <h2 class="prix">{{mc.prix}} $</h2>
+    <img src="{{mc.photo}}" alt="5 Terre" style="width:100%">
     <div class="container">
-      <button mat-fab class="button" (click)="deleteCarte(carte.id)">
+      <button mat-fab class="button" (click)="deleteCarte(mc.id)">
         <i class="material-icons delete">delete_forever</i></button>
-      <button mat-fab  class="button" routerLink="/cartes/edit/{{carte.id}}"  >
+      <button mat-fab  class="button" routerLink="/cartes/edit/{{mc.id}}"  >
         <i class="material-icons edit">edit</i></button><br>
     </div>
 

@@ -1,36 +1,15 @@
 <div class="container">
   <form class="example-form" #f="ngForm" (ngSubmit)="AddEnseign(f.value)">
     <h1>Nouveau Enseign</h1>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Marque</mat-label>
-      <input matInput [ngModel] name="marque" placeholder="Marque" required>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Email</mat-label>
-      <input matInput [formControl]="emailFormControl" name="email" [ngModel] placeholder="Ex. pat@example.com">
-      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-        Please enter a valid email address
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Address</mat-label>
-      <textarea [ngModel] name="adress"  placeholder="Ex. 100 Main St"></textarea>
-    </mat-form-field>
-
-
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Telephone</mat-label>
-      <span matPrefix>+216 &nbsp;</span>
-      <input type="tel" name="tel" [ngModel]  placeholder="26034334">
-      <mat-icon matSuffix>mode_edit</mat-icon>
-    </mat-form-field>
-    <button type="submit" >Ajouter</button>
+    <input class="text" #marque="ngModel" matInput [ngModel] name="marque" placeholder="Marque" required><br>
+    <div class="help" *ngIf="!marque.valid && marque.touched">Ne peut pas être vide !!</div>
+    <input class="text" #gmail="ngModel" type="email" matInput email name="gmail" [ngModel] placeholder="Expl.pat@example.com" required><br>
+    <div class="help" *ngIf="!gmail.valid && gmail.touched">Ne peut pas être vide !!</div>
+    <textarea  class="text" #adress="ngModel" [ngModel] name="adress"  required placeholder="Adresse"></textarea><br>
+    <div class="help" *ngIf="!adress.valid && adress.touched">Ne peut pas être vide !!</div>
+    <input class="text" #tel="ngModel" type="tel" name="tel" [ngModel] required placeholder="26034334"><br>
+    <div class="help" *ngIf="!tel.valid && tel.touched">Ne peut pas être vide !!</div>
+    <input  class="file" type="file" (change)="onSelectFile($event)" required [ngModel] name="photo"><br>
+    <button class="btn-add" type="submit" >Ajouter</button>
   </form>
 </div>

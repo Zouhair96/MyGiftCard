@@ -1,16 +1,34 @@
-
+<div class="container" *ngIf="mode=='list-cat'">
 <div *ngIf="categories">
-    <mat-card><span>Categories</span></mat-card>
+    <mat-card>
+      <span>Categories</span>
+    <input class="rechercher" type="text" [(ngModel)]="mc"/> <button class="btn-rechercher" (click)="chercher()">Chercher</button>
+    </mat-card>
   <div class="test" *ngFor="let cat of categories._embedded.categories">
-    <div class="a"><div class="icon"><img src="{{cat.photo}}" alt="5 Terre" style="width:100%"></div></div>
+    <div class="a"><div class="icon"><img src="{{cat.photo}}"  style="width:100%"
+       (click)="getCartes(cat)"></div></div>
     <div class="b"><h1>{{cat.name}}</h1></div>
     <div class="c">
       <button class="delete" mat-raised-button (click)="deleteCartegorie(cat.id)">
         Delete</button>
-      <button class="edit" mat-raised-button  routerLink="/categories/edit/{{cat.id}}">
+      <button class="edit" mat-raised-button (click)="onEditCat(cat.id)">
         Edit</button>
     </div>
   </div>
+</div>
+</div>
+
+<div class="container" *ngIf="mode =='edit-cat'" >
+  <section>
+    <form class="example-form" #f="ngForm" (ngSubmit)="EditCategorie(f.value)">
+      <h1>Modifier Catégorie</h1>
+      <input matInput  placeholder="Nom" required [ngModel] name="name" [(ngModel)]="currentCat.name"><br>
+      <textarea matInput [ngModel] name="description" [(ngModel)]="currentCat.description"></textarea><br>
+      <input matInput  placeholder="Photo" required [ngModel] name="photo" [(ngModel)]="currentCat.photo"><br>
+      <button class="btn-edit" type="submit" >Confirme</button>
+    </form>
+  </section>
+
 </div>
 
 

@@ -6,9 +6,9 @@ div{
 }
 
 mat-card{
-  width: 1100px;
-  height: 50px;
-  padding: 10px;
+  width: 80%;
+  height: 60px;
+  padding: inherit;
   margin-bottom: 50px;
 }
 span{
@@ -76,4 +76,61 @@ span{
   height: 76px;
   line-height: 20px;
   display: flex;
+}
+
+section{
+  margin: 15px;
+  text-align: center;
+  width: 1100px;
+  height: 500px;
+  background-color: #fff;
+}
+form>input ,textarea{
+  width: 40%;
+  height: 70px;
+  border: 1px solid;
+  margin: 5px;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.btn-edit{
+  width: 41%;
+  height: 70px;
+  border: none;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-edit:hover{
+  background-color: transparent;
+  border: 1px solid;
+  color: #000;
+}
+.btn-rechercher{
+  width: 90px;
+  height: 50px;
+  border: none;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-rechercher:hover{
+  background-color: transparent;
+  border: 1px solid;
+  color: #000;
+}
+.rechercher{
+  width: 40%;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,.1);
+  margin: 5px;
+  padding-left: 10px;
+  font-weight: 600;
 }
